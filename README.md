@@ -82,3 +82,8 @@ Invoke-RestMethod -Method Put -Uri "http://localhost:8080/users/<user-id>" `
     -ContentType "application/json" `
     -Body '{"name":"Mathew Mbugua","email":"mathew.mbugua@example.com"}'
 ```
+
+## Notes
+
+- In-memory storage — all data is lost on server restart.
+- Can be extended to MongoDB or PostgreSQL without changing handlers.
