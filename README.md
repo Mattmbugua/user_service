@@ -62,10 +62,10 @@ Invoke-RestMethod -Method Post -Uri "http://localhost:8080/users" `
 Invoke-RestMethod -Method Get -Uri "http://localhost:8080/users"
 ```
 
-**Get all Users:**
+**Get User by id:**
 
 ```
-Invoke-RestMethod -Method Get -Uri "http://localhost:8080/users"
+Invoke-RestMethod -Method Get -Uri "http://localhost:8080/users/<user-id>"
 ```
 
 **Delete User by id:**
@@ -75,8 +75,10 @@ Invoke-RestMethod -Method Delete -Uri "http://localhost:8080/users/<user-id>"
 
 ```
 
-**Get all Users:**
+**Update user by id :**
 
 ```
-Invoke-RestMethod -Method Get -Uri "http://localhost:8080/users"
+Invoke-RestMethod -Method Put -Uri "http://localhost:8080/users/<user-id>" `
+    -ContentType "application/json" `
+    -Body '{"name":"Mathew Mbugua","email":"mathew.mbugua@example.com"}'
 ```
