@@ -54,17 +54,29 @@ Runs on: [http://localhost:8080](http://localhost:8080)
 Invoke-RestMethod -Method Post -Uri "http://localhost:8080/users" `
     -ContentType "application/json" `
     -Body '{"name":"Mathew","email":"mathew@example.com"}'
-
+```
 
 **Get all Users:**
 
+```
 Invoke-RestMethod -Method Get -Uri "http://localhost:8080/users"
 ```
 
 **Get all Users:**
 
+```
 Invoke-RestMethod -Method Get -Uri "http://localhost:8080/users"
+```
+
+**Delete User by id:**
+
+```
+Invoke-RestMethod -Method Delete -Uri "http://localhost:8080/users/<user-id>"
 
 ```
 
+**Get all Users:**
+
+```
+Invoke-RestMethod -Method Get -Uri "http://localhost:8080/users"
 ```
