@@ -47,3 +47,24 @@ Runs on: [http://localhost:8080](http://localhost:8080)
 ---
 
 ## Example Usage (PowerShell)
+
+**Create user:**
+
+```powershell
+Invoke-RestMethod -Method Post -Uri "http://localhost:8080/users" `
+    -ContentType "application/json" `
+    -Body '{"name":"Mathew","email":"mathew@example.com"}'
+
+
+**Get all Users:**
+
+Invoke-RestMethod -Method Get -Uri "http://localhost:8080/users"
+```
+
+**Get all Users:**
+
+Invoke-RestMethod -Method Get -Uri "http://localhost:8080/users"
+
+```
+
+```
