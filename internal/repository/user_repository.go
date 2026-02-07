@@ -69,7 +69,7 @@ func (r *InMemoryUserRepository) GetAll() ([]*model.User, error) {
 
 	users := make([]*model.User, 0, len(r.users))
 	for _, u := range r.users {
-		// return pointer to each user
+
 		userCopy := u
 		users = append(users, &userCopy)
 	}

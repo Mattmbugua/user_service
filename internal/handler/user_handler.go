@@ -40,7 +40,7 @@ func (h *UserHandler) getAllUsers(c *gin.Context) {
 	})
 }
 
-// Handler for creating a new user
+// creating a new user
 func (h *UserHandler) createUser(c *gin.Context) {
 	var req struct {
 		Name  string `json:"name"`
@@ -65,7 +65,7 @@ func (h *UserHandler) createUser(c *gin.Context) {
 	})
 }
 
-// Handler for GET /users/:id
+// GET /users/:id
 func (h *UserHandler) getUser(c *gin.Context) {
 	id := c.Param("id")
 
@@ -82,7 +82,7 @@ func (h *UserHandler) getUser(c *gin.Context) {
 	})
 }
 
-// Handler for PUT /users/:id
+// PUT /users/:id
 func (h *UserHandler) updateUser(c *gin.Context) {
 	id := c.Param("id")
 	var req struct {
@@ -108,7 +108,7 @@ func (h *UserHandler) updateUser(c *gin.Context) {
 	})
 }
 
-// Handler for DELETE /users/:id
+// DELETE /users/:id
 func (h *UserHandler) deleteUser(c *gin.Context) {
 	id := c.Param("id")
 
@@ -120,10 +120,10 @@ func (h *UserHandler) deleteUser(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, gin.H{
 		"status":  "success",
 		"message": "User deleted successfully",
-	}) // 204
+	})
 }
 
-// Map domain errors to HTTP status codes
+// Mapping domain errors to HTTP status codes
 func (h *UserHandler) handleError(c *gin.Context, err error) {
 	switch err {
 	case errors.ErrNotFound:
