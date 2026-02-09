@@ -87,3 +87,8 @@ Invoke-RestMethod -Method Put -Uri "http://localhost:8080/users/<user-id>" `
 
 - In-memory storage — all data is lost on server restart.
 - Can be extended to MongoDB or PostgreSQL without changing handlers.
+
+### Server Features
+
+- Uses **graceful shutdown** to handle system interrupts.  
+  The server will finish ongoing requests before stopping, ensuring no abrupt termination of in-progress API calls
