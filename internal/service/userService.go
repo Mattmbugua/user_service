@@ -25,10 +25,11 @@ func (s *UserService) CreateUser(name, email string) (*model.User, error) {
 
 	// Call repository to create user
 	createdUser, err := s.repo.Create(user)
+
 	if err != nil {
 		return nil, err
 	}
-
+	sendWelcomeEmailAsync(user.Name, user.Email)
 	return createdUser, nil
 }
 
