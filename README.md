@@ -34,6 +34,14 @@ Runs on: [http://localhost:8080](http://localhost:8080)
 
 ---
 
+## Running Tests
+
+Run all service and handler layer tests:
+
+```bash
+go test ./...
+```
+
 ## API Endpoints
 
 | Method | Endpoint   | Description       |
